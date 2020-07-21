@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div(style="border: 1px solid black; padding: 10px")
+    h1= title
+    p Welcome to #{title}!
+    p created by: Jomark using Pug View Engine and Node/Express
+  br
+  div(style="border: 1px dotted red; padding: 10px")
+    for message in messages
+  
+          h2 #{message.text}
+          h3 -#{message.user}
+          p #{message.added}
+          hr
+
+  a(href="/new") Add a new Message
+          
